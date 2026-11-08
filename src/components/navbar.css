@@ -1,0 +1,58 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px max(5vw, calc((100vw - 1200px) / 2));
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brand {
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: #6366f1;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: #6366f1;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 5%;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 22px;
+  }
+}
