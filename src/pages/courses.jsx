@@ -9,7 +9,7 @@ const courses = [
     description:
       'Learn how to structure web pages with semantic HTML and build a strong foundation for the web.',
     level: 'Beginner',
-    videoUrl: 'http://youtube.com/watch?v=kUMe1FH4CHE',
+    videoUrl: 'https://www.youtube.com/watch?v=hu-q2zYwEYs&list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G',
   },
   {
     number: '02',
@@ -18,7 +18,7 @@ const courses = [
     description:
       'Explore styling, layouts, and responsive design to make your web pages look great on every screen.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/watch?v=OXGznpKZ_sA',
+    videoUrl: 'https://www.youtube.com/watch?v=I9XRrlOOazo&list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT',
   },
   {
     number: '03',
@@ -27,52 +27,52 @@ const courses = [
     description:
       'Learn to build interactive user interfaces from reusable components.',
     level: 'Intermediate',
-    videoUrl: 'https://www.youtube.com/watch?v=bMknfKXIFA8',
+    videoUrl: 'https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d',
   },
   {
     number: '04',
+    category: 'DATABASES',
+    title: 'JavaScript',
+    description:
+      'Build programming fundamentals and add behavior and interactivity to websites.',
+    level: 'Beginner',
+    videoUrl: 'https://www.youtube.com/watch?v=qoSksQ4s_hg&list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET',
+  },
+  {
+    number: '05',
     category: 'DATABASES',
     title: 'MongoDB',
     description:
       'Get started with MongoDB and learn how to work with data in a document database.',
     level: 'Intermediate',
-    videoUrl: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u',
+    videoUrl: 'https://www.youtube.com/watch?v=ExcRbA7fy_A&list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA',
   },
   {
-    number: '05',
+    number: '06',
     category: 'BACKEND',
     title: 'Node.js',
     description:
       'Use JavaScript on the server to build the foundation of backend applications.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/watch?v=Oe421EPjeBE',
+    videoUrl: 'https://www.youtube.com/watch?v=zb3Qk8SG5Ms&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU',
   },
   {
-    number: '06',
+    number: '07',
     category: 'DEVELOPER TOOLS',
     title: 'Git',
     description:
       'Learn the essentials of version control and how to track changes to your code.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/watch?v=apGV9Kg7ics',
+    videoUrl: 'https://www.youtube.com/watch?v=4okmgMzPwZ8&list=PL4cUxeGkcC9j2pbmcA93DR1A3m7VEgSxK',
   },
   {
-    number: '07',
+    number: '08',
     category: 'DEVELOPER TOOLS',
     title: 'GitHub',
     description:
       'Discover how to host repositories and collaborate on projects with GitHub.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/watch?v=apGV9Kg7ics',
-  },
-  {
-    number: '08',
-    category: 'PROGRAMMING',
-    title: 'JavaScript',
-    description:
-      'Build programming fundamentals and add behavior and interactivity to websites.',
-    level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/watch?v=PkZNo7MFNFg',
+    videoUrl: 'https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR',
   },
 ]
 
