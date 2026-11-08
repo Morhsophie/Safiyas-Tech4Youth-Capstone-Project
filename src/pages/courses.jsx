@@ -9,7 +9,7 @@ const courses = [
     description:
       'Learn how to structure web pages with semantic HTML and build a strong foundation for the web.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+html',
+    videoUrl: 'http://youtube.com/watch?v=kUMe1FH4CHE',
   },
   {
     number: '02',
@@ -18,7 +18,7 @@ const courses = [
     description:
       'Explore styling, layouts, and responsive design to make your web pages look great on every screen.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+css',
+    videoUrl: 'https://www.youtube.com/watch?v=OXGznpKZ_sA',
   },
   {
     number: '03',
@@ -27,7 +27,7 @@ const courses = [
     description:
       'Learn to build interactive user interfaces from reusable components.',
     level: 'Intermediate',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+react',
+    videoUrl: 'https://www.youtube.com/watch?v=bMknfKXIFA8',
   },
   {
     number: '04',
@@ -36,7 +36,7 @@ const courses = [
     description:
       'Get started with MongoDB and learn how to work with data in a document database.',
     level: 'Intermediate',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+mangodb',
+    videoUrl: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u',
   },
   {
     number: '05',
@@ -45,7 +45,7 @@ const courses = [
     description:
       'Use JavaScript on the server to build the foundation of backend applications.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+node',
+    videoUrl: 'https://www.youtube.com/watch?v=Oe421EPjeBE',
   },
   {
     number: '06',
@@ -54,7 +54,7 @@ const courses = [
     description:
       'Learn the essentials of version control and how to track changes to your code.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+git',
+    videoUrl: 'https://www.youtube.com/watch?v=apGV9Kg7ics',
   },
   {
     number: '07',
@@ -63,7 +63,7 @@ const courses = [
     description:
       'Discover how to host repositories and collaborate on projects with GitHub.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+github',
+    videoUrl: 'https://www.youtube.com/watch?v=apGV9Kg7ics',
   },
   {
     number: '08',
@@ -72,7 +72,7 @@ const courses = [
     description:
       'Build programming fundamentals and add behavior and interactivity to websites.',
     level: 'Beginner',
-    videoUrl: 'https://www.youtube.com/results?search_query=net+ninja+javascript',
+    videoUrl: 'https://www.youtube.com/watch?v=PkZNo7MFNFg',
   },
 ]
 
@@ -92,7 +92,7 @@ function Courses() {
         <div className="course-grid">
           {courses.map((course) => (
             <a
-              aria-label={`Open Net Ninja ${course.title} videos on YouTube`}
+              aria-label={`Open ${course.title} course video on YouTube`}
               className="course-card"
               href={course.videoUrl}
               key={course.number}
@@ -105,7 +105,7 @@ function Courses() {
               <h2>{course.title}</h2>
               <p className="course-description">{course.description}</p>
               <span className="course-video-link">
-                Watch Net Ninja videos
+                Watch course video
                 <span aria-hidden="true">↗</span>
               </span>
             </a>
