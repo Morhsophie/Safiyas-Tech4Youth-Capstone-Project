@@ -54,7 +54,7 @@ function Login() {
             {notice && <p className="auth-notice" role="status">{notice}</p>}
           </form>
           <p className="auth-switch">
-            New to Tech 4 Youth? <a href="/register">Create an account</a>
+            New to Tech 4 Youth? <a href="/#/register">Create an account</a>
           </p>
         </section>
       </main>

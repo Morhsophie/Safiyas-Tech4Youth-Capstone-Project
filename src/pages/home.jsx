@@ -56,11 +56,11 @@ function Home() {
               to full-stack apps.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="/courses">
+              <a className="button button-primary" href="/#/courses">
                 <BookIcon />
                 Explore Courses
               </a>
-              <a className="button button-secondary" href="/register">
+              <a className="button button-secondary" href="/#/register">
                 Join Now
                 <ArrowIcon />
               </a>
@@ -116,11 +116,11 @@ function Home() {
               one click away.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="/register">
+              <a className="button button-primary" href="/#/register">
                 Join Now
                 <ArrowIcon />
               </a>
-              <a className="button button-secondary" href="/courses">Explore Courses</a>
+              <a className="button button-secondary" href="/#/courses">Explore Courses</a>
             </div>
           </div>
         </section>

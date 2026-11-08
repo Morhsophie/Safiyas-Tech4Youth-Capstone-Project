@@ -85,7 +85,7 @@ function Register() {
             {notice && <p className="auth-notice" role="status">{notice}</p>}
           </form>
           <p className="auth-switch">
-            Already have an account? <a href="/login">Login</a>
+            Already have an account? <a href="/#/login">Login</a>
           </p>
         </section>
       </main>
