@@ -96,8 +96,6 @@ function Courses() {
               className="course-card"
               href={course.videoUrl}
               key={course.number}
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <div className="course-card-top">
                 <span className="course-number">{course.number}</span>
