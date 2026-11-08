@@ -91,7 +91,14 @@ function Courses() {
         </section>
         <div className="course-grid">
           {courses.map((course) => (
-            <article className="course-card" key={course.number}>
+            <a
+              aria-label={`Open Net Ninja ${course.title} videos on YouTube`}
+              className="course-card"
+              href={course.videoUrl}
+              key={course.number}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <div className="course-card-top">
                 <span className="course-number">{course.number}</span>
                 <span className="course-level">{course.level}</span>
@@ -99,16 +106,11 @@ function Courses() {
               <p className="course-category">{course.category}</p>
               <h2>{course.title}</h2>
               <p className="course-description">{course.description}</p>
-              <a
-                className="course-video-link"
-                href={course.videoUrl}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
+              <span className="course-video-link">
                 Watch Net Ninja videos
                 <span aria-hidden="true">↗</span>
-              </a>
-            </article>
+              </span>
+            </a>
           ))}
         </div>
       </main>
