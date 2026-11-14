@@ -1,4 +1,7 @@
-const API_BASE_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/+$/, '')
+const API_BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD ? 'https://tech4youth-api-safiya.onrender.com' : '')
+).replace(/\/+$/, '')
 
 async function readJson(response) {
   try {
