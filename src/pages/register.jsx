@@ -1,23 +1,39 @@
 import { useState } from 'react'
 import Navbar from '../components/navbar.jsx'
+import { postAuth } from '../api.js'
 import './routed-pages.css'
 
 function Register() {
   const [notice, setNotice] = useState('')
   const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
-    const formData = new FormData(event.currentTarget)
+    const form = event.currentTarget
+    const formData = new FormData(form)
     const password = formData.get('password')
-    const confirmPassword = formData.get('confirmPassword')
 
-    if (password !== confirmPassword) {
+    if (password !== formData.get('confirmPassword')) {
       setNotice('The passwords do not match. Please check them and try again.')
       return
     }
 
-    setNotice('Registration is not connected yet. Your details were not sent or saved.')
+    setNotice('')
+    setIsSubmitting(true)
+    try {
+      const result = await postAuth('register', {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        password,
+      })
+      setNotice(result.message)
+      form.reset()
+    } catch (error) {
+      setNotice(error instanceof Error ? error.message : 'Unable to register. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -81,7 +97,9 @@ function Register() {
               type={showPassword ? 'text' : 'password'}
             />
 
-            <button className="auth-submit" type="submit">Create account</button>
+            <button className="auth-submit" disabled={isSubmitting} type="submit">
+              {isSubmitting ? 'Creating account...' : 'Create account'}
+            </button>
             {notice && <p className="auth-notice" role="status">{notice}</p>}
           </form>
           <p className="auth-switch">

@@ -1,14 +1,30 @@
 import { useState } from 'react'
 import Navbar from '../components/navbar.jsx'
+import { postAuth } from '../api.js'
 import './routed-pages.css'
 
 function Login() {
   const [notice, setNotice] = useState('')
   const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
-    setNotice('Login is not connected yet. Your details were not sent or saved.')
+    const formData = new FormData(event.currentTarget)
+    setNotice('')
+    setIsSubmitting(true)
+
+    try {
+      await postAuth('login', {
+        email: formData.get('email'),
+        password: formData.get('password'),
+      })
+      window.location.hash = '/courses'
+    } catch (error) {
+      setNotice(error instanceof Error ? error.message : 'Unable to log in. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -50,7 +66,9 @@ function Login() {
               </button>
             </div>
 
-            <button className="auth-submit" type="submit">Login</button>
+            <button className="auth-submit" disabled={isSubmitting} type="submit">
+              {isSubmitting ? 'Signing in...' : 'Login'}
+            </button>
             {notice && <p className="auth-notice" role="status">{notice}</p>}
           </form>
           <p className="auth-switch">

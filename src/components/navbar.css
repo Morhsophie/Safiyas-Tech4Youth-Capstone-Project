@@ -43,6 +43,27 @@
   color: #6366f1;
 }
 
+.main-nav-button {
+  border: 0;
+  background: transparent;
+  color: #4b5563;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.main-nav-button:hover,
+.main-nav-button:focus-visible {
+  color: #6366f1;
+}
+
+.nav-user-name {
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
